@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/kingFragment">
+
+    <fragment
+        android:id="@+id/kingFragment"
+        android:name="mm.com.fairway.assignmentapi.fragment.KingFragment"
+        android:label="fragment_king"
+        tools:layout="@layout/fragment_king" >
+        <action
+            android:id="@+id/action_kingFragment_to_queenFragment"
+            app:destination="@id/queenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/queenFragment"
+        android:name="mm.com.fairway.assignmentapi.fragment.QueenFragment"
+        android:label="fragment_queen"
+        tools:layout="@layout/fragment_queen" />
+</navigation>
