@@ -1,9 +1,11 @@
 package mm.com.fairway.assignmentapi.adapter
 
+import android.accounts.AccountManager.get
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.info_king_layout.view.*
 import mm.com.fairway.assignmentapi.R
 import mm.com.fairway.assignmentapi.model.KingItem
@@ -15,6 +17,7 @@ class KingAdapter(var kingItemList:ArrayList<KingItem>):RecyclerView.Adapter<Kin
             itemView.name_txt.text=kingItem.name
             itemView.class_txt.text=kingItem.`class`
             itemView.vote_txt.text=kingItem.vote_count.toString()
+            Picasso.get().load(kingItem.img_url).into(itemView.king_img)
         }
     }
 
